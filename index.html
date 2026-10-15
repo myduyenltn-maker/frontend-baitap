@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Góc học tập của mình</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="logo">MyStudy</div>
+      <div class="nav-links">
+        <a href="#gioi-thieu">Giới thiệu</a>
+        <a href="#mon-hoc">Môn học</a>
+        <a href="#lien-he">Liên hệ</a>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">WELCOME TO MY WEBSITE</p>
+      <h1>Học tốt hơn,<br><span>mỗi ngày một chút.</span></h1>
+      <p class="hero-text">Một góc nhỏ để giới thiệu bản thân, lưu lại mục tiêu và những môn học mình yêu thích.</p>
+      <a class="button" href="#gioi-thieu">Khám phá ngay</a>
+    </div>
+    <div class="decor decor-one"></div>
+    <div class="decor decor-two"></div>
+  </header>
+
+  <main>
+    <section id="gioi-thieu" class="section intro">
+      <div class="section-tag">01 / ABOUT ME</div>
+      <h2>Xin chào, mình là <span>một sinh viên</span>.</h2>
+      <p>Mình yêu thích công nghệ, sáng tạo và học hỏi những kỹ năng mới. Website này được tạo bằng HTML, CSS và JavaScript như một bài tập thực hành Front End.</p>
+    </section>
+
+    <section id="mon-hoc" class="section">
+      <div class="section-tag">02 / MY LEARNING</div>
+      <h2>Những điều mình đang học</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">⌘</div>
+          <h3>HTML</h3>
+          <p>Xây dựng cấu trúc và nội dung cho trang web.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">✦</div>
+          <h3>CSS</h3>
+          <p>Thiết kế màu sắc, bố cục và giao diện đẹp mắt.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">↗</div>
+          <h3>JavaScript</h3>
+          <p>Tạo tương tác để website sinh động hơn.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="quote">
+      <p>“Thành công bắt đầu từ những bước nhỏ được thực hiện mỗi ngày.”</p>
+      <span>— Góc học tập của mình</span>
+    </section>
+
+    <section id="lien-he" class="section contact">
+      <div>
+        <div class="section-tag">03 / SAY HELLO</div>
+        <h2>Cùng nhau học hỏi nhé!</h2>
+        <p>Bấm nút bên cạnh để nhận một lời nhắn tích cực.</p>
+      </div>
+      <button class="button" id="messageButton" type="button">Gửi lời động viên</button>
+      <p id="message" class="message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> MyStudy · Bài tập thực hành Front End</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
