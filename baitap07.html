@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài tập 07 - Thiết kế Website</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    /* ── HEADER ── */
+    #header {
+      background-color: #2c6e49;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    #header h1 {
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+    #header p {
+      font-size: 13px;
+      color: #cde8d0;
+    }
+
+    /* ── MENU NGANG ── */
+    #menu {
+      background-color: #1b4332;
+      overflow: hidden;
+    }
+    #menu a {
+      display: block;
+      float: left;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    #menu a:hover {
+      background-color: #40916c;
+      color: #fff;
+    }
+    #menu::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* ── LAYOUT CHÍNH ── */
+    #wrapper {
+      width: 960px;
+      margin: 20px auto;
+      display: flex;
+      gap: 20px;
+    }
+
+    /* ── SIDEBAR TRÁI ── */
+    #sidebar {
+      width: 200px;
+      flex-shrink: 0;
+    }
+    #sidebar h3 {
+      background-color: #2c6e49;
+      color: white;
+      padding: 8px 10px;
+      font-size: 13px;
+      margin-bottom: 0;
+    }
+    #sidebar ul {
+      list-style: none;
+      border: 1px solid #ccc;
+      background: white;
+    }
+    #sidebar ul li a {
+      display: block;
+      padding: 8px 10px;
+      color: #333;
+      text-decoration: none;
+      border-bottom: 1px solid #eee;
+      font-size: 13px;
+    }
+    #sidebar ul li a:hover {
+      background-color: #d8f3dc;
+      color: #1b4332;
+    }
+
+    /* ── NỘI DUNG CHÍNH ── */
+    #content {
+      flex: 1;
+    }
+    .news-item {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 15px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+    .news-item img {
+      float: left;
+      width: 120px;
+      height: 80px;
+      object-fit: cover;
+      margin-right: 12px;
+      border: 1px solid #ccc;
+    }
+    .news-item h4 {
+      color: #2c6e49;
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
+    .news-item p {
+      font-size: 13px;
+      line-height: 1.5;
+      color: #555;
+    }
+    .news-item::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* ── BANNER ── */
+    #banner {
+      background: linear-gradient(135deg, #2c6e49, #40916c);
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+    }
+    #banner h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+    #banner p {
+      font-size: 14px;
+      color: #cde8d0;
+    }
+
+    /* ── FOOTER ── */
+    #footer {
+      background-color: #1b4332;
+      color: #adb5bd;
+      text-align: center;
+      padding: 15px;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+    #footer a {
+      color: #74c69d;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div id="header">
+    <div>
+      <h1>🌿 Trang Web Của Tôi</h1>
+      <p>Thiết kế Web cơ bản với HTML & CSS</p>
+    </div>
+    <div style="font-size:12px; color:#cde8d0;">
+      Chào mừng bạn đến với website của chúng tôi!
+    </div>
+  </div>
+
+  <!-- MENU NGANG -->
+  <div id="menu">
+    <a href="#">Trang chủ</a>
+    <a href="#">Giới thiệu</a>
+    <a href="#">Sản phẩm</a>
+    <a href="#">Tin tức</a>
+    <a href="#">Bản đồ</a>
+    <a href="#">Liên hệ</a>
+  </div>
+
+  <!-- NỘI DUNG -->
+  <div id="wrapper">
+
+    <!-- SIDEBAR -->
+    <div id="sidebar">
+      <h3>📋 Danh mục</h3>
+      <ul>
+        <li><a href="#">Tin tức mới nhất</a></li>
+        <li><a href="#">Sản phẩm nổi bật</a></li>
+        <li><a href="#">Khuyến mãi</a></li>
+        <li><a href="#">Hướng dẫn sử dụng</a></li>
+        <li><a href="#">Hỗ trợ khách hàng</a></li>
+        <li><a href="#">Câu hỏi thường gặp</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTENT -->
+    <div id="content">
+
+      <!-- Banner -->
+      <div id="banner">
+        <h2>Chào mừng đến với Website của chúng tôi!</h2>
+        <p>Nơi cung cấp thông tin và dịch vụ chất lượng cao</p>
+      </div>
+
+      <!-- Tin tức 1 -->
+      <div class="news-item">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=120&h=80&fit=crop" alt="Tin tức 1">
+        <h4>Giới thiệu về thiết kế Web với HTML và CSS</h4>
+        <p>HTML và CSS là nền tảng cơ bản của thiết kế web hiện đại. Với HTML, bạn xây dựng cấu trúc trang web, còn CSS giúp trang trí và định dạng giao diện đẹp mắt, chuyên nghiệp hơn.</p>
+      </div>
+
+      <!-- Tin tức 2 -->
+      <div class="news-item">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=120&h=80&fit=crop" alt="Tin tức 2">
+        <h4>CSS Layout: Float, Flexbox và Grid</h4>
+        <p>Các kỹ thuật layout trong CSS giúp bạn sắp xếp các phần tử trên trang web một cách linh hoạt. Float là kỹ thuật cũ nhưng vẫn được dùng phổ biến trong các bài học cơ bản.</p>
+      </div>
+
+      <!-- Tin tức 3 -->
+      <div class="news-item">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=120&h=80&fit=crop" alt="Tin tức 3">
+        <h4>Menu điều hướng với CSS: Dọc và Ngang</h4>
+        <p>Menu là thành phần quan trọng của mọi website. Sử dụng CSS, bạn có thể tạo ra menu dọc hoặc ngang với hiệu ứng hover thu hút, giúp người dùng điều hướng dễ dàng hơn.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer">
+    <p>© 2024 Website của tôi | Bài tập Lab 03 - CSS cơ bản | Thiết kế bởi <a href="#">Sinh viên</a></p>
+  </div>
+
+</body>
+</html>
